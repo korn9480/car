@@ -1,0 +1,11 @@
+.import
+.mono
+data_car
+Export
+car.sln
+car.csproj
+default_env.tres
+export_presets.cfg
+icon.png
+icon.png.import
+project.godot

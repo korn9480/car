@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Kon.cs" type="Script" id=1]
+[ext_resource path="res://image/yellow.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26, 44 )
+
+[node name="Kon" type="Node2D"]
+
+[node name="Kon" type="KinematicBody2D" parent="."]
+position = Vector2( 80, 494 )
+rotation = -1.5708
+collision_mask = 16
+script = ExtResource( 1 )
+wheel_base = 50.0
+steering_angle = 20.0
+speed = 400
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kon"]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="yellow" type="Sprite" parent="Kon"]
+rotation = 1.5708
+texture = ExtResource( 2 )

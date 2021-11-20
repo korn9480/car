@@ -1,0 +1,288 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://image/Terrain (16x16).png" type="Texture" id=1]
+[ext_resource path="res://scene/Kon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/Tin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Map.cs" type="Script" id=4]
+[ext_resource path="res://fonts/Prompt/Prompt-BlackItalic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://fonts/Prompt/Prompt-BoldItalic.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scripts/Root.cs" type="Script" id=7]
+[ext_resource path="res://fonts/Prompt/Prompt-Black.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://fonts/Prompt/Prompt-ExtraBoldItalic.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 16, 0, 16, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 16, 16, 16 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "Terrain (16x16).png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 288, 64, 32, 32 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Terrain (16x16).png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 0, 64, 64 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 2
+1/autotile/bitmask_flags = [  ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Terrain (16x16).png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 96, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 300
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 50
+font_data = ExtResource( 9 )
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 65536, 0, 0, 65567, 0, 0, 131072, 0, 0, 131103, 0, 0, 196608, 0, 0, 196639, 0, 0, 262144, 0, 0, 262175, 0, 0, 327680, 0, 0, 327711, 0, 0, 393216, 0, 0, 393247, 0, 0, 458752, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458783, 0, 0, 524288, 0, 0, 524295, 0, 0, 524319, 0, 0, 589824, 0, 0, 589831, 0, 0, 589855, 0, 0, 655360, 0, 0, 655367, 0, 0, 655391, 0, 0, 720896, 0, 0, 720897, 2, 0, 720898, 2, 0, 720899, 2, 0, 720900, 2, 0, 720901, 2, 0, 720902, 2, 0, 720903, 0, 0, 720927, 0, 0, 786432, 0, 0, 786439, 0, 0, 786463, 0, 0, 851968, 0, 0, 851975, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 851999, 0, 0, 917504, 0, 0, 917511, 0, 0, 917535, 0, 0, 983040, 0, 0, 983041, 2, 0, 983042, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 983046, 2, 0, 983047, 0, 0, 983071, 0, 0, 1048576, 0, 0, 1048583, 0, 0, 1048607, 0, 0, 1114112, 0, 0, 1114119, 0, 0, 1114143, 0, 0, 1179648, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179679, 0, 0, 1245184, 0, 0, 1245215, 0, 0, 1310720, 0, 0, 1310751, 0, 0, 1376256, 0, 0, 1376287, 0, 0, 1441792, 0, 0, 1441823, 0, 0, 1507328, 0, 0, 1507359, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572868, 0, 0, 1572869, 0, 0, 1572870, 0, 0, 1572871, 0, 0, 1572872, 0, 0, 1572873, 0, 0, 1572874, 0, 0, 1572875, 0, 0, 1572876, 0, 0, 1572877, 0, 0, 1572878, 0, 0, 1572879, 0, 0, 1572880, 0, 0, 1572881, 0, 0, 1572882, 0, 0, 1572883, 0, 0, 1572884, 0, 0, 1572885, 0, 0, 1572886, 0, 0, 1572887, 0, 0, 1572888, 0, 0, 1572889, 0, 0, 1572890, 0, 0, 1572891, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 0, 0 )
+
+[node name="Map" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="Map"]
+collision_layer = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D"]
+position = Vector2( 0, 80 )
+polygon = PoolVector2Array( 32, 431, 224, 431, 224, 399, 32, 399 )
+
+[node name="Kon" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, -64 )
+
+[node name="Tin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -64 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+offset = Vector2( 1100, 400 )
+transform = Transform2D( 1, 0, 0, 1, 1100, 400 )
+
+[node name="Number" type="Label" parent="UI"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.807843, 0.933333, 0.0823529, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "อันดับ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="One" type="Label" parent="UI"]
+margin_top = 56.0
+margin_right = 40.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0.0470588, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Two" type="Label" parent="UI"]
+margin_left = -8.0
+margin_top = 120.0
+margin_right = 32.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0.478431, 0.0156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Go" type="Label" parent="UI"]
+margin_left = -899.682
+margin_top = -188.212
+margin_right = -365.682
+margin_bottom = 265.788
+custom_fonts/font = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="UI"]
+
+[node name="Round" type="CanvasLayer" parent="."]
+offset = Vector2( 1100, 50 )
+transform = Transform2D( 1, 0, 0, 1, 1100, 50 )
+
+[node name="number" type="Label" parent="Round"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 8 )
+text = "จำนวนรอบ :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Round"]
+margin_top = 80.0
+margin_right = 40.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 9 )
+text = "Kon
+Tin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kon" type="Label" parent="Round"]
+margin_left = 100.0
+margin_top = 80.0
+margin_right = 180.0
+margin_bottom = 205.0
+custom_fonts/font = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tin" type="Label" parent="Round"]
+margin_left = 100.0
+margin_top = 144.0
+margin_right = 180.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="round" type="LineEdit" parent="Round"]
+margin_left = 220.0
+margin_top = -2.0
+margin_right = 374.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="star" type="Button" parent="Round"]
+margin_left = -12.0
+margin_top = 222.0
+margin_right = 161.0
+margin_bottom = 305.0
+custom_fonts/font = SubResource( 11 )
+text = "เริ่มเกม"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clear" type="Button" parent="Round"]
+margin_left = 244.0
+margin_top = 222.0
+margin_right = 412.0
+margin_bottom = 305.0
+custom_fonts/font = SubResource( 12 )
+text = "เริ่มใหม่"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Map/Area2D" to="Map" method="PassPositionStar"]
+[connection signal="timeout" from="UI/Timer" to="." method="TimeSleep"]
+[connection signal="pressed" from="Round/star" to="." method="StarGame"]
+[connection signal="pressed" from="Round/clear" to="." method="Clear"]
